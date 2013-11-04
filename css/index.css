@@ -10,8 +10,7 @@ body{
 }
 section{
     font-family:'Play',sans-serif;
-    background-color:rgba(0, 0, 0, .6);  
-	max-width:1200px;
+    max-width:1200px;
 	min-height:95%;
 	position:absolute;
 	left:0;
@@ -88,4 +87,7 @@ footer {
 }
 footer a {
     color:#E74C3C;
+}
+article {
+    background-color:rgba(0, 0, 0, .6);
 }
