@@ -8,7 +8,7 @@ $(document).ready(function (){
     });
     
     // animate navbar
-    var bigHeight = 75;
+    /*var bigHeight = 75;
     var smallHeight = 50;
     $(".navButton").css("line-height", smallHeight+"px");
     $('.navButton').mouseenter(function() {
@@ -22,10 +22,10 @@ $(document).ready(function (){
             'height': smallHeight+"px",
             "line-height": smallHeight+"px"
         }); 
-    });
+    });*/
     
     // animate footer opacity
-    $('footer').mouseenter(function() {
+    /*$('footer').mouseenter(function() {
         $(this).stop().animate({
             'opacity':'1'
         }, "fast");
@@ -34,5 +34,5 @@ $(document).ready(function (){
         $(this).stop().animate({
             'opacity':'.4'
         }, "fast");
-    });
+    });*/
 });
