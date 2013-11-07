@@ -2,83 +2,98 @@
 to the whole site and move it into a separate file (e.g. main.css) */
 
 a:link {
-    text-decoration:none;    
+    text-decoration:none;
 }
 body{
-	font-family:'Open Sans',sans-serif;
+    font-family:'Open Sans',sans-serif;
     background:#0a0a0a url(/media/argyle.png) ;
-	padding:0;
-	margin:0;
+    padding:0;
+    margin:0;
     height:100%
 }
 section{
     font-family:'Play',sans-serif;
+    /*background-color:rgba(0, 0, 0, .6);  */
+    background-color:transparent;
     max-width:1200px;
-	min-height:95%;
-	position:absolute;
-	left:0;
-	right:0;
-	margin:auto;
+    min-height:95%;
+    position:absolute;
+    left:0;
+    right:0;
+    margin:auto;
 }
+/*LOGO*/
 header{
-	background-color:#ECF0F1;
-	height:100px;
+    background-color:#ECF0F1;
+    height:100px;
 }
 #logoCover{
     background-color:transparent;
-	max-width:640px;
-	height:100px;
-	margin-left:auto;
-	margin-right:auto;
-	overflow:hidden;
+    max-width:640px;
+    height:100px; /*percentage */
+    margin-left:auto;
+    margin-right:auto;
+    overflow:hidden;
+
 }
 #logo1{
-	font-size:60px;
-	color:#95A5A6;
-	text-align:right;
-	vertical-align:middle;
-	line-height:100px;
-	margin:0;
+    font-size:60px;
+    color:#95A5A6;
+    text-align:right;
+    vertical-align:middle;
+    line-height:100px;
+    margin:0;
+
 }
 #logoBack1{
-	height:100px;
-	width:300px;
-	background-color:#ECF0F1;
-	z-index:2;
-	position:absolute;
-	margin-left:-1px;
-	border-radius:80px;
+    height:100px;
+    width:300px;
+    background-color:#ECF0F1;
+    z-index:2;
+    position:absolute;
+    margin-left:-1px;
+    border-radius:80px;
+
 }
 #logo1,#logo2{
-	margin:0;
+    margin:0;
 }
 #logoBack2{
-	height:100px;
-	width:260px;
-	background-color:transparent;
-	z-index:1;
-	position:relative;
-	border-radius:25px;
+    height:100px;
+    width:260px;
+    background-color:transparent;
+    z-index:1;
+    position:relative;
+    border-radius:25px;
     padding-left:2.5%;
+
 }
 #logo2{
     font-size:60px;
-	color:#E74C3C;
-	text-align:right;
-	vertical-align:middle;
-	line-height:100px;
+    color:#E74C3C;
+    text-align:right;
+    vertical-align:middle;
+    line-height:100px;
+}
+/*NAVIGATION BAR*/
+nav{
+    height:50px;
+    z-index:10;
+    display:block;
+
 }
 .navButton{
-	width:20%;
-	height:50px;
-	background-color:#BDC3C7;
-	float:left;
-	cursor:pointer;
-	color: #fff;
-	font-size:25px;
-	text-align:center;
+    width:20%;
+    height:50px; /*percentage */
+    background-color:#BDC3C7;
+    float:left;
+    cursor:pointer;
+    color: #fff;
+    font-size:25px;
+    text-align:center;
+    z-index:10;
 }
-footer {
+/*footer {
     text-align:center;
     font-size:12px;
     color:#95A5A6;
@@ -90,7 +105,144 @@ footer {
 }
 footer a {
     color:#E74C3C;
-}
-article {
+}*/
+
+article{
     background-color:rgba(0, 0, 0, .6);
+}
+
+/*#pageOne{
+	background-color:blue;
+}*/
+
+/*SLOGAN*/
+#slogan{
+    background-color:transparent;
+}
+.sloganSec{
+    height:inherit;
+    display:block;
+    position:relative;
+}
+#buzzWord{
+    width:35%;
+    background-color:transparent;
+    float:left;
+    color:#E74C3C;
+    text-align: center;
+    vertical-align: middle;
+    line-height:160%;
+    font-size:60px;
+}
+#lure{
+    width:65%;
+    background-color:transparent;
+    float:right;
+    color:white;
+    font-size:15px;
+    text-align: center;
+    vertical-align: middle;
+    line-height:300%;
+
+}
+/*SLIDER*/
+#slider{
+    overflow:hidden;
+    background-color:white;
+}
+
+/*THREE SUB PAGES*/
+/*Dimensions, Height set in jquery*/
+.subPages{
+    width:100%;
+    overflow:hidden;
+}
+/*Setting dimensions and placement of word box*/
+.word{
+    width:25%;
+    height:75%;
+    background-color:transparent;
+    overflow:hidden;
+    margin-left:7.5%;
+    float:left;
+    margin-top:-50px;
+    transition: all 2s ease;
+    opacity: 0;
+}
+/*Setting dimensions and placement of pic box*/
+
+.pic{
+    width:67.5%;
+    height:100%;
+    background-color:gray;
+    float:right;
+    margin-right:-20%;
+    transition: all 2s ease;
+}
+#pic1 {
+    background:url("http://graphics8.nytimes.com/images/2009/06/14/magazine/new_data.jpg") no-repeat center center;
+}
+#pic2 {
+    background:url(/media/code.png) no-repeat center center;
+}
+#pic3 {
+    background:url("http://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/dollar-icon.png") no-repeat center center;
+
+}
+/*Setting dimensions and placement of target bar
+    -used in jquery to start animation*/
+.target{
+    width:100%;
+    height:1px;
+    background-color:transparent;
+    top:15%;
+    z-index:99999;
+    position:relative;
+}
+/*Special attributes to each Sub Page*/
+#sub1{
+    background-image: linear-gradient(to bottom, #ECF0F1 0%, #BDC3C7 100%);
+}
+#sub2{
+    background-image: linear-gradient(to bottom,#95A5A6 0%, #BDC3C7 100%);
+}
+#sub2 .word{
+    float:right;
+    margin-right:7.5%;
+}
+#sub2 .pic{
+    float:left;
+    margin-left:-20%;
+}
+
+#sub3{
+   background-image: linear-gradient(to bottom, #7F8C8D 0%, #95A5A6 100%);
+}
+
+.word{
+    font-size:30px;
+    text-align:left;
+    color:#E74C3C;
+}
+.word p {
+    font-size:20px;
+    margin-top:-10%;
+    color:black;
+}
+.wordButton{
+    cursor:pointer;
+    width:45%;
+    height:15%;
+    background-color:#E74C3C;
+    color:white;
+    font-size:15px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 300%;
+    margin-top:-100%;
+    transition: all 2s ease;
+    opacity: 0;
+}
+.wordButton:hover{
+    background-color:#c0392b;
 }
