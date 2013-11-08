@@ -41,12 +41,20 @@ $(document).ready(function (){
     ////////////////////////////////////////////////
 
     //Scroll animation for 3 subpages//
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         var targetOneScroll = ($('#target1').offset().top);
         var targetTwoScroll = ($('#target2').offset().top);
         var targetThreeScroll = ($('#target3').offset().top);
         var windowScroll = ($(window).scrollTop() + $(window).height());
 
+        if ($(window).scrollTop() > 150) {
+            $("#navBarCont").css({"position": "fixed", "top": 0, "left": 0});
+            $("#navBarCont").slideDown(500);
+            // hasNavBarPopped = true;
+        } else {
+            $("#navBarCont").css({"position": "static"});
+            $("#navBarCont").slideDown(500);
+        }
 
         if (windowScroll > targetOneScroll ){
             $("#word1").css({"margin-top": "5%", "opacity": 1});

@@ -75,12 +75,77 @@ header{
     vertical-align:middle;
     line-height:100px;
 }
-/*NAVIGATION BAR*/
-nav{
-    height:50px;
-    z-index:10;
-    display:block;
 
+/*NAVAGATION BAR*/
+#navBarCont{
+    width:100%;
+    height:50px;
+    display:inline-block;
+    background-image: linear-gradient(to bottom, #BDC3C7 0%, #ECF0F1 100%);
+    z-index:99999;
+}
+
+/* entire container, keeps perspective */
+.vertical.flip-container {
+    width:20%;
+    float:left;
+}
+
+.flip-container, .front, .back {
+    width: 100%;
+    height: 50px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.3s;
+    transform-style: preserve-3d;
+    position: relative;
+    text-align:center;
+    line-height:50px;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility:hidden;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 1;
+    background-color:#ECF0F1;
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateX(-180deg);
+    background-color:#bdc3c7;
+    animation: toFront 0.1s linear normal forwards;
+}
+.vertical.flip-container {
+    position: relative;
+}
+.vertical.flip-container:hover .back {
+    animation-delay: 0.1s;
+    animation: toBack 0.1s linear normal  forwards;
+}
+@keyframes toBack {
+    0% {z-index:0;}
+    100% {z-index:1;}
+}
+@keyframes toFront {
+    0% {z-index:1;}
+    100% {z-index:0;}
+}
+.vertical.flip-container .flipper {
+    transform-origin: 100% 25px; /* half of height */
+}
+
+.vertical.flip-container:hover .flipper {
+    transform: rotateX(-180deg);
 }
 .navButton{
     width:20%;
