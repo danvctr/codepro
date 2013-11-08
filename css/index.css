@@ -6,7 +6,7 @@ a:link {
 }
 body{
     font-family:'Open Sans',sans-serif;
-    background:#0a0a0a url(/media/argyle.png) ;
+    background:#0a0a0a url(../media/argyle.png) ;
     padding:0;
     margin:0;
     height:100%
@@ -183,7 +183,7 @@ article{
     background:url("http://graphics8.nytimes.com/images/2009/06/14/magazine/new_data.jpg") no-repeat center center;
 }
 #pic2 {
-    background:url(/media/code.png) no-repeat center center;
+    background:url(../media/code.png) no-repeat center center;
 }
 #pic3 {
     background:url("http://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/dollar-icon.png") no-repeat center center;

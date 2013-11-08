@@ -4,20 +4,25 @@
 		<title>
 			code(p.ro) :: Insert slogan here.
 		</title>
-		
+
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="/media/icon-terminal-white.png" />
         <!-- /Favicon -->
 
         <!-- Internet includes -->
         <link href='//fonts.googleapis.com/css?family=Play|Open Sans' rel='stylesheet' />
+
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <script src='https://cdn.firebase.com/v0/firebase.js'></script>
         <!-- /Internet includes -->
-        
+
         <!-- Local includes -->
         <link href="css/index.css" media="screen" rel="stylesheet" />
         <link href="css/contact.css" media="screen" rel="stylesheet" />
+
+        <script src="js/contact.js"></script>
         <!-- /Local includes -->
 	</head>
 
@@ -46,7 +51,7 @@
     				(h.ome)
     			</div>
     			<div class="navButton">
-    				(a.bout)
+    				<a href="about.html">(a.bout)</a>
     			</div>
     			<div class="navButton">
     				(p.rojects)
@@ -55,7 +60,7 @@
     				(a.ccolades)
     			</div>
     			<div class="navButton">
-    				(c.ontact)
+                    <a href="contact.html">(c.ontact)</a>
     			</div>
     		</nav>
             <!-- /Logo & nav -->
@@ -63,7 +68,9 @@
             <!-- Main page content -->
             <article>
                 <h1>Interested? Let us know!</h1>
-
+                <input type="text" placeholder="Name" name="nameInput" id="nameInput" /><br>
+                <input type="email" placeholder="Email" name="emailInput" id="emailInput" /><br>
+                <button id="contactSubmit">Send</button>
             </article>
             <!-- /Main page content -->
         </section>

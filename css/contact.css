@@ -1,8 +1,14 @@
 article {
     color: white;
-    padding: 5% 5% 0 5%;
+    padding: 2% 5% 0 5%;
 }
 
 h1 {
     font-size: 30pt;
+}
+
+input {
+    font-size: 18pt;
+    margin-bottom: 10px;
+    border-radius: 3px;
 }
