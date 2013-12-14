@@ -1,0 +1,346 @@
+a:link {
+    text-decoration:none;    
+}
+body{
+	font-family:'Open Sans',sans-serif;
+    background:#0a0a0a url(/media/argyle.png) ;
+	padding:0;
+	margin:0;
+    height:100%
+}
+section{
+    font-family:'Play',sans-serif;
+    /*background-color:rgba(0, 0, 0, .6);  */
+    background-color:transparent;
+	max-width:1200px;
+	min-height:95%;
+	position:absolute;
+	left:0;
+	right:0;
+	margin:auto;
+}
+/*LOGO*/
+header{
+	background-color:#ECF0F1;
+	height:100px;
+}
+#logoCover{
+    background-color:transparent;
+	max-width:640px;
+	height:100px; /*percentage */
+	margin-left:auto;
+	margin-right:auto;
+	overflow:hidden;
+	
+}
+#logo1{
+	font-size:60px;
+	color:#95A5A6;
+	text-align:right;
+	vertical-align:middle;
+	line-height:100px;
+	margin:0;
+	
+}
+#logoBack1{
+	height:100px;
+	width:300px;
+	background-color:#ECF0F1;
+	z-index:2;
+	position:absolute;
+	margin-left:-1px;
+	border-radius:80px;
+	
+}
+#logo1,#logo2{
+	margin:0;
+}
+#logoBack2{
+	height:100px;
+	width:260px;
+	background-color:transparent;
+	z-index:1;
+	position:relative;
+	border-radius:25px;
+    padding-left:2.5%;
+    
+}
+#logo2{
+    font-size:60px;
+	color:#E74C3C;
+	text-align:right;
+	vertical-align:middle;
+	line-height:100px;
+}
+/*NAVAGATION BAR*/
+
+#navBarCont{
+	width:100%;
+	height:50px;
+	display:inline-block;	
+    background-color:#BDC3C7; 
+	z-index:99999;
+	
+}
+
+  
+  
+    /* entire container, keeps perspective */
+.vertical.flip-container {
+    width:20%;
+    float:left;
+    background-image: linear-gradient(to left, #BDC3C7 0%, #ECF0F1 100%);
+    
+}
+
+.vertical.flip-container:hover{
+	background-image: linear-gradient(to left, #ECF0F1 0%, #BDC3C7 100%);
+	-webkit-transition: all .3s ease;
+		-moz-transition: all .3s ease;
+		-ms-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		transition: all .3s ease;
+}	
+
+
+.flip-container, .front, .back {
+    width: 100%;
+    height: 50px;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: .3s;
+    transform-style: preserve-3d;
+    position: relative;
+    text-align:center;
+    line-height:50px;
+    
+    
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility:hidden;
+    
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 1;
+    background-color:#bdc3c7; 
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateX(-180deg);
+     background-color:#ECF0F1; 
+    animation: toFront 0.1s linear normal forwards;
+}
+.vertical.flip-container {
+    position: relative;
+}
+.vertical.flip-container:hover .back {
+    animation-delay: 0.1s;
+    animation: toBack 0.1s linear normal  forwards;
+}
+@keyframes toBack {  
+  0% {z-index:0;}
+  100% {z-index:1;}
+}
+@keyframes toFront {
+  0% {z-index:1;}
+  100% {z-index:0;}
+}
+.vertical.flip-container .flipper {
+    transform-origin: 100% 25px; /* half of height */
+}
+
+.vertical.flip-container:hover .flipper {
+    transform: rotateX(-180deg);
+}
+/*
+.navButton{
+	width:20%;
+	height:50px; 
+	background-color:#BDC3C7;
+	float:left;
+	cursor:pointer;
+	color: #fff;
+	font-size:25px;
+	text-align:center;
+	z-index:10;
+}
+*/
+/*footer {
+    text-align:center;
+    font-size:12px;
+    color:#95A5A6;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding-bottom:10px;
+    opacity:.4;
+}
+footer a {
+    color:#E74C3C;
+}*/
+
+article{
+	background-color:transparent;  
+	z-index:-9999;
+	
+}
+
+/*#pageOne{
+	background-color:blue;
+}*/
+	
+/*SLOGAN*/
+#slogan{
+	background-color:transparent;  
+	
+	
+}
+.sloganSec{	
+	display:block;
+	position:relative;
+}
+
+.sloganSec p{
+	text-align: center;
+	vertical-align: middle;	
+
+}	
+#buzzWord{
+	width:35%;
+	background-color:transparent;
+	float:left;
+	color:#E74C3C;
+	font-size:45px;
+	line-height:10px;
+}
+	
+#lure{
+	width:65%;
+	background-color:transparent;	
+	float:right;
+	color:white;
+	font-size:15px;
+	line-height:15px;
+	margin-top:17px;
+	
+}	
+
+/*THREE SUB PAGES*/
+	/*Deminsions, Height set in jquery*/
+	.subPages{
+	width:100%;
+	overflow:hidden;	
+	}	
+	/*Setting deminsions and placement of word box*/
+	.word{
+	width:100%;
+	height:100%;
+	background-color:transparent;
+	overflow:hidden;
+	margin-top:-50px;
+	text-align:center;
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-ms-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	transition: all 2s ease;
+	opacity: 0;
+	}
+	/*Setting deminsions and placement of pic box*/
+	
+	/*Setting deminsions and placement of target bar
+		-used in jquery to start animation*/
+	.target{
+	width:100%;
+	height:1px;
+	background-color:transparent;
+	top:15%;
+	z-index:99999;
+	position:relative;	
+	}	
+	/*Special attributes to each Sub Page*/
+	#sub1{
+	background-color: transparent;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #ECF0F1 0%, #BDC3C7 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #ECF0F1 0%, #BDC3C7 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #ECF0F1 0%, #BDC3C7 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ECF0F1), color-stop(1, #BDC3C7));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #ECF0F1 0%, #BDC3C7 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #ECF0F1 0%, #BDC3C7 100%);
+	}
+	#sub2{
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #95A5A6 0%, #BDC3C7 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #95A5A6 0%, #BDC3C7 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #95A5A6 0%, #BDC3C7 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #95A5A6), color-stop(1, #BDC3C7));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #95A5A6 0%, #BDC3C7 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom,#95A5A6 0%, #BDC3C7 100%);
+	}	
+			
+		
+		
+	#sub3{
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(top, #7F8C8D 0%, #95A5A6 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(top, #7F8C8D 0%, #95A5A6 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(top, #7F8C8D 0%, #95A5A6 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7F8C8D), color-stop(1, #95A5A6));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(top, #7F8C8D 0%, #95A5A6 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to bottom, #7F8C8D 0%, #95A5A6 100%);
+	}
+	
+	
+		
+	
+	.wordButton{
+		cursor:pointer;
+		width:135px;
+		height:50px;
+		background-color:#E74C3C;
+		color:white;
+		font-size:15px;
+		text-align: center;
+		vertical-align:middle;
+		line-height: 50px;
+		margin-top:-100%;
+		-webkit-transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-ms-transition: all .5s ease;
+		-o-transition: all .5s ease;
+		transition: all .5s ease;
+		opacity: 0;
+		
+	}	
+	
+		
+	.wordButton:hover{
+		background-color:#c0392b;	
+	}	
+	
