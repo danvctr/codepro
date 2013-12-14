@@ -22,8 +22,12 @@
         
         <!-- Local includes -->
         <link href="css/index.css" media="screen" rel="stylesheet" />
-        <script src="js/index.js"></script>
-        <!-- /Local includes -->
+        <link rel="stylesheet" media="screen and (max-width: 945px)" href="css/index.945px.css" /> 
+        <link rel="stylesheet" media="screen and (max-width: 624px)" href="css/index.624px.css" /> 
+        <script src="js/index.js"></script>        
+        <!-- /Site includes -->
+        
+        
 	</head>
 
 	<body>
@@ -168,10 +172,17 @@
             </article>
             <!-- /Main page content -->
         </section>
+       
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="jquery.fittext.js"></script>
+        <script type="text/javascript">
+            $("#slogan").fitText(1.2, { minFontSize: '20px', maxFontSize: '40px' });
+        </script>
 
-        <!-- This section requires healing by Ryan's Javascript majik
-        <footer>
+       
+       
+        <!--<footer>
             Designed by <a href="/"><span style="color: #95A5A6">code(</span>p.ro<span style="color: #95A5A6">)</span></a>
         </footer>-->
-	</body>
+    </body>
 </html>
