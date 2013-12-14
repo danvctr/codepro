@@ -108,4 +108,9 @@ $(document).ready(function (){
         sliderHeight: "100%",
         startOnSlide: 1
     });
+
+    $("#slogan").fitText(1.2, {
+         minFontSize: '20px',
+         maxFontSize: '40px' 
+    });
 });
